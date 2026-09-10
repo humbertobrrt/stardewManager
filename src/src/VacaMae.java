@@ -1,20 +1,8 @@
-public class VacaMae {
+public class VacaMae implements Animal {
 
     public String raca;
     public String nome;
     public int idade;
-
-    public String emitirSom(){
-        return "muuuuu";
-    }
-
-    public void exibirInfo(){
-        System.out.println(this.nome);
-        System.out.println("- Raça: " + this.raca);
-        System.out.println("- Idade: " + this.idade);
-        System.out.println("- Som: " + this.emitirSom());
-
-    };
 
     public VacaMae(String raca, String nome, int idade) {
         this.raca = raca;
@@ -22,9 +10,21 @@ public class VacaMae {
         this.idade = idade;
     }
 
-    public void coletarProduto(){
-        System.out.println("Retirando leite");
+    @Override
+    public void emitirSom() {
+        System.out.println("muuuuu");
     }
 
+    public void exibirInfo() {
+        System.out.println(this.nome);
+        System.out.println("- Raça: " + this.raca);
+        System.out.println("- Idade: " + this.idade);
+        this.emitirSom();
+    }
 
+    @Override
+    public void coletarProduto(){
+        System.out.println(this.nome);
+        System.out.println("Pegando ovos");
+    }
 }

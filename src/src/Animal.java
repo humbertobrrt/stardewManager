@@ -1,7 +1,7 @@
 public interface Animal {
 
     public void coletarProduto();
-    public String emitirSom();
+    public void emitirSom();
     public void exibirInfo();
 
 }

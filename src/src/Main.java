@@ -9,11 +9,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         List<Animal> animais = new ArrayList<>();
 
-        VacaMae v1 = new VacaMae("Holandesa", "Mimosa", 10);
-        Bezerro bezerro1 = new Bezerro("Holandesa", "Mimosinha", 1);
+        animais.add(new GalinhaMae("Caipira","Choqueira", 2));
+        animais.add(new Pintinho("Caipira","Choquinho", 1));
+        animais.add(new VacaMae("Holandesa", "Mimosa", 2));
+        animais.add(new Bezerro("Holandesa", "Mimosinha", 3));
 
-        animais.add(v1);
-        animais.add(bezerro1);
+
 
         System.out.println("-- MENU PRINCIPAL --");
         System.out.println("1 - Ver animais do curral");
@@ -30,6 +31,7 @@ public class Main {
 
             case 2: {
                 // comércio
+                animais.forEach(Animal::coletarProduto);
                 break;
             }
 

@@ -4,20 +4,21 @@ public class GalinhaMae implements Animal{
     public String nome;
     public int idade;
 
+    @Override
     public void coletarProduto(){
+        System.out.println(this.nome);
         System.out.println("Pegando ovos");
     }
 
-    public String emitirSom(){
-        return "popó";
+    public void emitirSom(){
+        System.out.println("popó");
     }
 
     public void exibirInfo(){
         System.out.println(this.nome);
         System.out.println("- Raça: " + this.raca);
         System.out.println("- Idade: " + this.idade);
-        System.out.println("- Som: " + this.emitirSom());
-
+        this.emitirSom();
     };
 
     public GalinhaMae(String raca, String nome, int idade) {
